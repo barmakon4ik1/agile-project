@@ -1,1 +1,1 @@
-from tag import *
+from .tag import *
