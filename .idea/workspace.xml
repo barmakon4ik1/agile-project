@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b07d7e4f-0000-4acb-8479-77fdb263187a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/projects/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/projects/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/projects/models/project_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/project_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/choices/priorities.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/choices/priorities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/choices/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/choices/statuses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/models/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/models/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/serializers/tag_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/serializers/tag_serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/utils/set_end_of_month.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/utils/set_end_of_month.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tasks/views/tag_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/views/tag_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../community-pulse" beforeDir="false" afterPath="$PROJECT_DIR$/../community-pulse" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,14 +29,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="2kgXTe75RJaRhjAfHHYQAgE2es4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,10 +53,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\my_projects\agile-project\apps" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -44,8 +82,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723706203336</updated>
-      <workItem from="1723706207124" duration="5000" />
+      <workItem from="1723706207124" duration="9332000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
