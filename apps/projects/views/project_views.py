@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -6,7 +7,6 @@ from rest_framework import status
 from rest_framework.views import APIView
 from apps.projects.models import Project
 from apps.projects.serializers.project_serializers import *
-from django.shortcuts import get_object_or_404
 
 
 class ProjectsListAPIView(APIView):
@@ -65,16 +65,21 @@ class ProjectsListAPIView(APIView):
 
 class ProjectDetailAPIView(APIView):
     def get_object(self, pk: int):
-        # возвращает либо объект, либо 404 ошибку:
         return get_object_or_404(Project, pk=pk)
 
     def get(self, request: Request, pk: int) -> Response:
         project = self.get_object(pk=pk)
+
         serializer = ProjectDetailSerializer(project)
-        return Response(serializer.data, status=status.HTTP_200_OK,)
+
+        return Response(
+            serializer.data,
+            status=status.HTTP_200_OK,
+        )
 
     def put(self, request: Request, pk: int) -> Response:
         project = self.get_object(pk=pk)
+
         serializer = CreateProjectSerializer(
             instance=project,
             data=request.data,
@@ -83,8 +88,16 @@ class ProjectDetailAPIView(APIView):
 
         if serializer.is_valid(raise_exception=True):
             serializer.save()
-            return Response(serializer.validated_data, status=status.HTTP_200_OK,)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST,)
+
+            return Response(
+                serializer.validated_data,
+                status=status.HTTP_200_OK,
+            )
+
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
     def delete(self, request: Request, pk: int) -> Response:
         project = self.get_object(pk=pk)
