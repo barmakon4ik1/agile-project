@@ -6,4 +6,5 @@ urlpatterns = [
     path('', ProjectsListAPIView.as_view()),
     path('<int:pk>/', ProjectDetailAPIView.as_view()),
     path('files/', ProjectFileListGenericView.as_view()),
+    path('files/<int:pk>/', ProjectFileDetailGenericView.as_view()),
 ]
