@@ -5,5 +5,5 @@ from apps.projects.views.project_file_views import *
 urlpatterns = [
     path('', ProjectsListAPIView.as_view()),
     path('<int:pk>/', ProjectDetailAPIView.as_view()),
-    path('files/', ProjectFileListAPIView.as_view()),
+    path('files/', ProjectFileListGenericView.as_view()),
 ]

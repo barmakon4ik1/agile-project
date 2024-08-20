@@ -14,7 +14,6 @@ def check_extension(filename):
 
 def check_file_size(file, required_size=2):
     file_size = file.size / (1024 * 1024)
-
     if file_size > required_size:
         return False
     return True

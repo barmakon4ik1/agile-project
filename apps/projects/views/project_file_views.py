@@ -2,12 +2,43 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework.generics import get_object_or_404
+from rest_framework.generics import get_object_or_404, ListCreateAPIView
 from apps.projects.models import ProjectFile, Project
-from apps.projects.serializers.project_file_serializers import (
-    AllProjectFilesSerializer,
-    CreateProjectFileSerializer,
-)
+from apps.projects.serializers.project_file_serializers import *
+
+
+class ProjectFileListGenericView(ListCreateAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return AllProjectFilesSerializer
+        return CreateProjectFileSerializer
+
+    def get_queryset(self):
+        project_name = self.request.query_params.get('project')
+
+        if project_name:
+            project_file = ProjectFile.objects.filter(
+                project__name=project_name
+            )
+            return project_file
+
+        return ProjectFile.objects.all()
+
+    def list(self, request: Request, *args, **kwargs) -> Response:
+        project_files = self.get_queryset()
+
+        if not project_files.exists():
+            return Response(
+                data=[],
+                status=status.HTTP_204_NO_CONTENT
+            )
+
+        serializer = self.get_serializer(project_files, many=True)
+
+        return Response(
+            serializer.data,
+            status=status.HTTP_200_OK
+        )
 
 
 class ProjectFileListAPIView(APIView):
