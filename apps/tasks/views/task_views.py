@@ -1,5 +1,6 @@
 from django.db.models import QuerySet
 from django.shortcuts import get_object_or_404
+from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
 from rest_framework.request import Request
 from rest_framework import status
@@ -7,6 +8,12 @@ from rest_framework.views import APIView
 from rest_framework.pagination import PageNumberPagination
 from apps.tasks.models import Task
 from apps.tasks.serializers.task_serializers import *
+
+
+class TaskViewListCreateGenericView(ListCreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = CreateUpdateTaskSerializer
+
 
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 5
@@ -23,13 +30,16 @@ class TasksListAPIView(APIView):
 
         if project_name:
             return Task.objects.filter(project__name=project_name)
+
         elif assignee_email:
             return Task.objects.filter(assignee__email=assignee_email)
+
         else:
             return Task.objects.all()
 
     def get(self, request: Request, *args, **kwargs) -> Response:
         tasks = self.get_objects()
+
         if not tasks.exists():
             return Response(
                 data=[],
@@ -42,21 +52,25 @@ class TasksListAPIView(APIView):
         if page is not None:
             serializer = AllTasksSerializer(page, many=True)
             return paginator.get_paginated_response(serializer.data)
+
         serializer = AllTasksSerializer(tasks, many=True)
+
         return Response(
             serializer.data,
             status=status.HTTP_200_OK
         )
 
     def post(self, request: Request, *args, **kwargs) -> Response:
-        serializer = CreateTaskSerializer(data=request.data)
+        serializer = CreateUpdateTaskSerializer(data=request.data)
 
         if serializer.is_valid(raise_exception=True):
             serializer.save()
+
             return Response(
                 serializer.data,
                 status=status.HTTP_201_CREATED
             )
+
         return Response(
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
@@ -110,3 +124,4 @@ class TaskDetailAPIView(APIView):
             },
             status=status.HTTP_204_NO_CONTENT
         )
+

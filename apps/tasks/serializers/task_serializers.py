@@ -1,12 +1,13 @@
+from datetime import datetime
 from typing import Any
 from rest_framework import serializers
 from django.utils import timezone
 from apps.projects.models import Project
+from apps.projects.serializers.project_serializers import ProjectShortInfoSerializer
 from apps.tasks.models import Task, Tag
 from apps.tasks.choices.priorities import Priority
-from datetime import datetime
-from apps.projects.serializers.project_serializers import ProjectShortInfoSerializer
 from apps.tasks.serializers.tag_serializers import TagSerializer
+from apps.users.models import User
 
 
 class AllTasksSerializer(serializers.ModelSerializer):
@@ -37,6 +38,11 @@ class CreateUpdateTaskSerializer(serializers.ModelSerializer):
         slug_field='name',
         queryset=Project.objects.all(),
     )
+    assignee = serializers.SlugRelatedField(
+        slug_field='email',
+        queryset=User.objects.all(),
+        required=False,
+    )
 
     class Meta:
         model = Task
@@ -46,7 +52,8 @@ class CreateUpdateTaskSerializer(serializers.ModelSerializer):
             'priority',
             'project',
             'tags',
-            'deadline'
+            'deadline',
+            'assignee'
         )
 
     def validate_name(self, value: str) -> str:
@@ -84,8 +91,7 @@ class CreateUpdateTaskSerializer(serializers.ModelSerializer):
             )
         return value
 
-    def validate_deadline(self, value: str) -> datetime:
-        # делаем время с временной зоной:
+    def validate_deadline(self, value: str) -> int:
         value = timezone.make_aware(value.replace(tzinfo=None), timezone.get_current_timezone())
         if value < timezone.now():
             raise serializers.ValidationError(
@@ -103,12 +109,16 @@ class CreateUpdateTaskSerializer(serializers.ModelSerializer):
 
     def update(self, instance: Task, validated_data: dict[str, Any]) -> Task:
         tags = validated_data.pop('tags', [])
+
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
+
         if tags:
             for tag in tags:
                 instance.tags.add(tag)
+
         instance.save()
+
         return instance
 
 
@@ -119,5 +129,3 @@ class TaskDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         exclude = ('updated_at', 'deleted_at')
-
-
