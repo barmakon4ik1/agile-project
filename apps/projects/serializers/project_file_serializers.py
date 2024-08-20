@@ -26,7 +26,7 @@ class CreateProjectFileSerializer(serializers.ModelSerializer):
         return value
 
     def validate_file_path(self, value: str) -> str:
-        if not check_extension(value):
+        if not check_extension(value.name):
             raise serializers.ValidationError(
                 "Valid file extensions: ['.csv', '.doc', '.pdf', '.xlsx']"
             )

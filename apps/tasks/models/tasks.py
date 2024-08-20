@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from apps.users.models import User # изменили на нашего юзера из нового приложения
 from django.db import models
 from apps.projects.models.project import Project
 from apps.tasks.choices.statuses import Statuses
