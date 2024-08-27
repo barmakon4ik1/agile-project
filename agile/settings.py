@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Регистрация модели пользователя
 AUTH_USER_MODEL = 'users.User'
 
 # Application definition
@@ -41,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.tasks.apps.TasksConfig',
     'apps.projects.apps.ProjectsConfig',
+    'apps.users.apps.UsersConfig',
     'rest_framework',
-    'apps.users.apps.UsersConfig', # Регистрация приложения юзер
 ]
 
 MIDDLEWARE = [
