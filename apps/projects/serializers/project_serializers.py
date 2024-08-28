@@ -36,4 +36,3 @@ class ProjectShortInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ('id', 'name')
-

@@ -1,4 +1,4 @@
-from apps.users.models import User # изменили на нашего юзера из нового приложения
+from apps.users.models import User
 from django.db import models
 from apps.projects.models.project import Project
 from apps.tasks.choices.statuses import Statuses

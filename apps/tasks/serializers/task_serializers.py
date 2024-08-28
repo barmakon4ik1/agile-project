@@ -129,3 +129,4 @@ class TaskDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         exclude = ('updated_at', 'deleted_at')
+

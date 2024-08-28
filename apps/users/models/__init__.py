@@ -1,1 +1,1 @@
-from .user import * # импортирование модели юзера
+from .user import *

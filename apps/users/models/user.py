@@ -12,7 +12,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         _("username"),
         max_length=50,
         unique=True,
-        error_messages={"unique": _("A user with that username already exists."), }
+        error_messages={
+            "unique": _("A user with that username already exists."),
+        }
     )
     first_name = models.CharField(
         _("first name"),
@@ -29,7 +31,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_length=150,
         unique=True
     )
-    phone = models.CharField(max_length=75, null=True, blank=True)
+    phone = models.CharField(max_length=15, null=True, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(
