@@ -220,11 +220,11 @@ class UserAPITestCase(APITestCase):
     # Проверка создания нового пользователя с хорошими данными
     def test_create_user(self):
         data = {
-            'username': 'chegevara',
-            'first_name': 'Che',
-            'last_name': 'Gevara',
-            'email': 'che@cubapartizane.cu',
-            'position': 'QA',
+            'username': 'fidelcastro',
+            'first_name': 'Fidel',
+            'last_name': 'Castro',
+            'email': 'fid@cubapartizane.cu',
+            'position': 'CEO',
             'password': 'NoPasaran!',
             're_password': 'NoPasaran!'
         }
