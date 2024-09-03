@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50a4045b-cb5a-4861-83ef-d92f9f73f80b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/serializers/user_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/serializers/user_serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/tests/user_fix.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/tests/user_fix.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/tests/user_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/tests/user_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/user_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views/user_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +246,7 @@
       <workItem from="1724829643278" duration="177000" />
       <workItem from="1724829837877" duration="11886000" />
       <workItem from="1725336580870" duration="67000" />
-      <workItem from="1725336822154" duration="7738000" />
+      <workItem from="1725336822154" duration="8710000" />
     </task>
     <servers />
   </component>
@@ -267,7 +263,7 @@
     <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_TagsListTestCase_test_get_tags.coverage" NAME="Test: apps.tasks.tests.tags.TagsListTestCase.test_get_tags Coverage Results" MODIFIED="1724830658991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserListGenericViewTestCase.coverage" NAME="Test: apps.users.tests.user_tests.UserListGenericViewTestCase Coverage Results" MODIFIED="1725339039780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tasks.coverage" NAME="Test: apps.tasks.tests.tasks Coverage Results" MODIFIED="1725339130647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserAPITestCase_test_create_user.coverage" NAME="Test: apps.users.tests.user_tests.UserAPITestCase.test_create_user Coverage Results" MODIFIED="1725344656466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests.coverage" NAME="Test: apps.users.tests.user_tests Coverage Results" MODIFIED="1725344775592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserAPITestCase_test_create_user.coverage" NAME="Test: apps.users.tests.user_tests.UserAPITestCase.test_create_user Coverage Results" MODIFIED="1725345681051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests.coverage" NAME="Test: apps.users.tests.user_tests Coverage Results" MODIFIED="1725345729548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
