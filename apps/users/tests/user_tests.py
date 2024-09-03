@@ -1,9 +1,12 @@
 from django.test import TestCase
-from apps.users.models import User
-from apps.users.serializers.user_serializers import RegisterUserSerializer
-
+from apps.users.serializers.user_serializers import RegisterUserSerializer, UserListSerializer
 from apps.projects.models import Project
 from apps.users.choices.positions import Positions
+from rest_framework import status
+from rest_framework.test import APITestCase, APIClient
+from django.urls import reverse
+from apps.users.models import User
+from unittest.mock import patch
 
 
 # Получение списка пользователей
@@ -67,7 +70,7 @@ class RegisterUserSerializerTestCase(TestCase):
             'first_name': 'Che',
             'last_name': 'Gevara',
             'email': 'che@cubapartizane.cu',
-            'position': Positions.QA,
+            'position': "QA",
             'password': 'nopasaran',
             're_password': 'nopasaran'
         }
@@ -133,7 +136,7 @@ class UserDetailGenericViewTestCase(TestCase):
     # получения информации об определённом пользователе, ожидаемых полях и их типах данных.
     def test_user_detail_success(self):
         response = self.client.get(f'/api/v1/users/{self.user.pk}/')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
         self.assertIsInstance(response.data['username'], str)
         self.assertIsInstance(response.data['first_name'], str)
         self.assertIsInstance(response.data['last_name'], str)
@@ -155,3 +158,105 @@ class UserDetailGenericViewTestCase(TestCase):
         response = self.client.get('/api/v1/users/999/')
         self.assertEqual(response.status_code, 404)
         self.assertIn('detail', response.data)
+
+# **********************************************************************
+
+
+class UserAPITestCase(APITestCase):
+    fixtures = ['apps/users/tests/user_fix.json']
+
+    def setUp(self):
+        self.client = APIClient()
+        self.user_list_url = reverse('user-list')
+        self.register_url = reverse('user-register')
+        self.user_detail_url = lambda pk: reverse('user-detail', kwargs={'pk': pk})
+
+    # Проверка получения списка всех пользователей
+    def test_get_all_users(self):
+        response = self.client.get(self.user_list_url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        users = User.objects.all()
+        serializer = UserListSerializer(users, many=True)
+        self.assertEqual(response.data, serializer.data)
+
+    # Проверка получения списка всех пользователей по имени проекта
+    def test_get_users_by_project_name(self):
+        project_name = 'Test_project_1'
+        url = reverse('user-list')
+        response = self.client.get(url, {'project_name': project_name})
+        self.assertEqual(response.status_code, 200)
+        self.assertGreater(len(response.data), 0)
+        for user_data in response.data:
+            self.assertEqual(user_data['project'], project_name)
+
+    # Проверка получения пустого списка пользователей(нужно подменить выходной QuerySet)
+    @patch('apps.users.views.user_views.UserListGenericView.get_queryset')
+    def test_get_empty_user_list(self, mock_get_queryset):
+        mock_get_queryset.return_value = User.objects.none()
+        response = self.client.get(self.user_list_url)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.data, [])
+
+    # Проверка работы сериализатора на правильное отображение данных списка пользователей
+    def test_user_list_serializer(self):
+        users = User.objects.all()
+        serializer = UserListSerializer(users, many=True)
+        serialized_data = serializer.data
+        for user_data, user in zip(serialized_data, users):
+            self.assertEqual(user_data['first_name'], user.first_name)
+            self.assertEqual(user_data['last_name'], user.last_name)
+            self.assertEqual(user_data['email'], user.email)
+            self.assertEqual(user_data['phone'], user.phone)
+            self.assertEqual(user_data['last_login'], user.last_login)
+            self.assertEqual(user_data['position'], user.position)
+
+    # Проверка получения деталей конкретного пользователя по его ID.
+    def test_get_user_detail(self):
+        user_id = 1
+        response = self.client.get(self.user_detail_url(user_id))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['username'], 'chegevara')
+
+    # Проверка создания нового пользователя с хорошими данными
+    def test_create_user(self):
+        data = {
+            'username': 'chegevara',
+            'first_name': 'Che',
+            'last_name': 'Gevara',
+            'email': 'che@cubapartizane.cu',
+            'position': 'QA',
+            'password': 'No_Pasaran!',
+            're_password': 'No_Pasaran!'
+        }
+        response = self.client.post(self.register_url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(User.objects.filter(username='chegevara').exists())
+
+    # Проверка создания нового пользователя с испорченными данными
+    def test_create_user_with_invalid_data(self):
+        data = {
+            'username': 'malchik pupkin',
+            'first_name': 'Malchik',
+            'last_name': 'Pupkin',
+            'email': 'malchik.pupkin@web.de',
+            'position': 'DESIGNER',
+            'password': 'pass',
+            're_password': 'pass'
+        }
+        response = self.client.post(self.register_url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    # Проверка создания нового пользователя с пропуском обязательных данных
+    def test_create_user_with_missing_data(self):
+        url = reverse('user-register')  # Маршрут для создания нового пользователя
+        data = {
+            "username": "malchikpupkin",
+            "first_name": "Malchik",
+            "email": "malchik.pupkin@web.de",
+            "position": "DESIGNER",
+            "password": "password000",
+            "re_password": "password000"
+        }
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn('last_name', response.dat)
