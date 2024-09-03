@@ -28,8 +28,8 @@
             "phone": "3222333222",
             "position": "QA",
             "is_active": true,
-            "registered": "2024-09-02 22:08",
-            "updated_at": "2024-09-03 06:34",
+            "registered": "2024-09-02 22:08:00",
+            "updated_at": "2024-09-03 06:34:00",
             "project": 1
         }
     },

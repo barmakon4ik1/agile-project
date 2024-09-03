@@ -136,7 +136,7 @@ class UserDetailGenericViewTestCase(TestCase):
     # получения информации об определённом пользователе, ожидаемых полях и их типах данных.
     def test_user_detail_success(self):
         response = self.client.get(f'/api/v1/users/{self.user.pk}/')
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data['username'], str)
         self.assertIsInstance(response.data['first_name'], str)
         self.assertIsInstance(response.data['last_name'], str)
@@ -225,8 +225,8 @@ class UserAPITestCase(APITestCase):
             'last_name': 'Gevara',
             'email': 'che@cubapartizane.cu',
             'position': 'QA',
-            'password': 'No_Pasaran!',
-            're_password': 'No_Pasaran!'
+            'password': 'NoPasaran!',
+            're_password': 'NoPasaran!'
         }
         response = self.client.post(self.register_url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -259,4 +259,4 @@ class UserAPITestCase(APITestCase):
         }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertIn('last_name', response.dat)
+        self.assertIn('last_name', response.data)
