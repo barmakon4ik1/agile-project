@@ -5,62 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a4045b-cb5a-4861-83ef-d92f9f73f80b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/tasks/tests/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/agile-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agile-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/users/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/users/tests/user_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/migrations/0002_projectfile_project_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/migrations/0002_projectfile_project_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/models/project_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/models/project_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/serializers/project_file_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/serializers/project_file_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/serializers/project_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/serializers/project_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/utils/upload_file_helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/utils/upload_file_helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/projects/views/project_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/projects/views/project_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/routers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/choices/priorities.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/choices/priorities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/choices/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/choices/statuses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/migrations/0002_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/migrations/0002_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/models/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/models/tag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/models/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/models/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/serializers/tag_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/serializers/tag_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/serializers/task_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/serializers/task_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/tests/tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/tests/tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/utils/set_end_of_month.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/utils/set_end_of_month.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/views/tag_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/views/tag_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/tasks/views/task_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tasks/views/task_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/choices/positions.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/choices/positions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/serializers/user_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/serializers/user_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/user_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views/user_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +45,12 @@
     "Django tests.Test: apps.tasks.tests.tags.TagsListTestCase.executor": "Run",
     "Django tests.Test: apps.tasks.tests.tags.TagsListTestCase.test_get_tags.executor": "Run",
     "Django tests.Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data.executor": "Run",
+    "Django tests.Test: apps.tasks.tests.tasks.executor": "Run",
+    "Django tests.Test: apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password.executor": "Run",
+    "Django tests.Test: apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success.executor": "Debug",
+    "Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase.executor": "Run",
+    "Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list.executor": "Run",
+    "Django tests.Test: apps.users.tests.user_tests.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "E:/my_project/agile-project",
@@ -109,28 +63,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Django tests.Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data">
-    <configuration name="Test: apps.tasks.tests.tags.CreateTagTestCase" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="agile-project" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="apps.tasks.tests.tags.CreateTagTestCase" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data" type="DjangoTestsConfigurationType" temporary="true">
       <module name="agile-project" />
       <option name="ENV_FILES" value="" />
@@ -146,6 +79,90 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="TARGET" value="apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="agile-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="agile-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: apps.users.tests.user_tests.UserListGenericViewTestCase" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="agile-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="apps.users.tests.user_tests.UserListGenericViewTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="agile-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -189,13 +206,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.Unnamed" />
-      <item itemvalue="Django tests.Test: apps.tasks.tests.tags.CreateTagTestCase" />
+      <item itemvalue="Django tests.Test: apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password" />
+      <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success" />
+      <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase" />
+      <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list" />
       <item itemvalue="Django tests.Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list" />
+        <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserListGenericViewTestCase" />
+        <item itemvalue="Django tests.Test: apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password" />
+        <item itemvalue="Django tests.Test: apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success" />
         <item itemvalue="Django tests.Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data" />
-        <item itemvalue="Django tests.Test: apps.tasks.tests.tags.CreateTagTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +241,8 @@
       <workItem from="1724829386431" duration="251000" />
       <workItem from="1724829643278" duration="177000" />
       <workItem from="1724829837877" duration="11886000" />
+      <workItem from="1725336580870" duration="67000" />
+      <workItem from="1725336822154" duration="2666000" />
     </task>
     <servers />
   </component>
@@ -225,9 +250,15 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_TagsListTestCase_test_get_tags.coverage" NAME="Test: apps.tasks.tests.tags.TagsListTestCase.test_get_tags Coverage Results" MODIFIED="1724830658991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_UpdateTagTestCase_test_update_tag_without_data.coverage" NAME="Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data Coverage Results" MODIFIED="1724833832725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_TagsListTestCase.coverage" NAME="Test: apps.tasks.tests.tags.TagsListTestCase Coverage Results" MODIFIED="1724830485704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserListGenericViewTestCase_test_user_list.coverage" NAME="Test: apps.users.tests.user_tests.UserListGenericViewTestCase.test_user_list Coverage Results" MODIFIED="1725339112749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserDetailGenericViewTestCase_test_user_detail_success.coverage" NAME="Test: apps.users.tests.user_tests.UserDetailGenericViewTestCase.test_user_detail_success Coverage Results" MODIFIED="1725338941610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_RegisterUserSerializerTestCase_test_valid_password.coverage" NAME="Test: apps.users.tests.user_tests.RegisterUserSerializerTestCase.test_valid_password Coverage Results" MODIFIED="1725338978657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_UpdateTagTestCase_test_update_tag_without_data.coverage" NAME="Test: apps.tasks.tests.tags.UpdateTagTestCase.test_update_tag_without_data Coverage Results" MODIFIED="1724833832725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_CreateTagTestCase.coverage" NAME="Test: apps.tasks.tests.tags.CreateTagTestCase Coverage Results" MODIFIED="1724830916040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tags_TagsListTestCase_test_get_tags.coverage" NAME="Test: apps.tasks.tests.tags.TagsListTestCase.test_get_tags Coverage Results" MODIFIED="1724830658991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests_UserListGenericViewTestCase.coverage" NAME="Test: apps.users.tests.user_tests.UserListGenericViewTestCase Coverage Results" MODIFIED="1725339039780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_tasks_tests_tasks.coverage" NAME="Test: apps.tasks.tests.tasks Coverage Results" MODIFIED="1725339130647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/agile_project$Test__apps_users_tests_user_tests.coverage" NAME="Test: apps.users.tests.user_tests Coverage Results" MODIFIED="1725339146399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
